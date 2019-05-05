@@ -9,5 +9,7 @@ namespace Application.IServices
     public interface IUserService
     {
         void AddUser(User user);
+        IEnumerable<User> GetAllUsers();
+        void RemoveUser(int id);
     }
 }

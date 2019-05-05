@@ -20,10 +20,24 @@ namespace Application.Controllers
             _us = us;
         }
 
+        [HttpGet]
+        public IEnumerable<User> Get()
+        {
+            return _us.GetAllUsers();
+        }
+
+        [Route("New")]
         [HttpPost]
         public void Post([FromBody]User value)
         {
             _us.AddUser(value);
+        }
+
+        [Route("Remove/{id}")]
+        [HttpPost]
+        public void Post(int id)
+        {
+            _us.RemoveUser(id);
         }
     }
 }
