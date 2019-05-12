@@ -27,7 +27,7 @@ namespace Application
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server = localhost\\SQLEXPRESS; Database = AppDB; Trusted_Connection = True;"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server = localhost; Database = AppDB; Trusted_Connection = True;"));
             services.AddScoped<IUserService, UserService>();
         }
 
