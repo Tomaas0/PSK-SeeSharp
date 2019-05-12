@@ -23,8 +23,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-Application/Application/ojb
-Application/Application/bin
+Application/Application/obj/
+Application/Application/bin/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
