@@ -26,6 +26,17 @@ namespace Application.Controllers
             return _us.GetAllUsers();
         }
 
+        [Route("Login")]
+        [HttpPost]
+        public ActionResult Login([FromBody]User value)
+        {
+            User user = _us.LoginUser(value.Email, value.Password);
+            if(user != null)
+                return Ok();
+                else return Unauthorized();
+
+        }
+
         [Route("New")]
         [HttpPost]
         public void Post([FromBody]User value)
